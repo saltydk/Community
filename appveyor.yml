@@ -24,387 +24,291 @@ environment:
 
   - job_name: airdcpp
     job_group: one
-    jobs_per_group: 8
 
   - job_name: airsonic
     job_group: one
-    jobs_per_group: 8
 
   - job_name: alltube
     job_group: one
-    jobs_per_group: 8
 
   - job_name: alternatrr
     job_group: one
-    jobs_per_group: 8
 
   - job_name: alternatrrx
     job_group: one
-    jobs_per_group: 8
 
   - job_name: amongus
     job_group: one
-    jobs_per_group: 8
 
   - job_name: apprise
     job_group: one
-    jobs_per_group: 8
 
   - job_name: archivebox
     job_group: one
-    jobs_per_group: 8
 
   - job_name: asshama
     job_group: one
-    jobs_per_group: 8
 
   - job_name: autoscan
     job_group: one
-    jobs_per_group: 8
 
   - job_name: bazarrx
     job_group: one
-    jobs_per_group: 8
 
   - job_name: beets
     job_group: one
-    jobs_per_group: 8
 
   - job_name: bitwarden
     job_group: one
-    jobs_per_group: 8
 
   - job_name: bookstack
     job_group: one
-    jobs_per_group: 8
 
   - job_name: btrfsmaintenance
     job_group: one
-    jobs_per_group: 8
 
   - job_name: calibre
     job_group: one
-    jobs_per_group: 8
 
   - job_name: calibre-web
     job_group: one
-    jobs_per_group: 8
 
   - job_name: comicstreamer
     job_group: one
-    jobs_per_group: 8
 
   - job_name: couchpotato
     job_group: one
-    jobs_per_group: 8
 
   - job_name: coder
     job_group: one
-    jobs_per_group: 8
 
   - job_name: comixed
     job_group: one
-    jobs_per_group: 8
 
   - job_name: deemix
     job_group: one
-    jobs_per_group: 8
 
   - job_name: deemixrr
     job_group: one
-    jobs_per_group: 8
 
   - job_name: deezloader-remix
     job_group: one
-    jobs_per_group: 8
 
   - job_name: deluge
     job_group: one
-    jobs_per_group: 8
 
   - job_name: delugevpn
     job_group: one
-    jobs_per_group: 8
 
   - job_name: embystat
     job_group: one
-    jobs_per_group: 8
 
   - job_name: emby2
     job_group: one
-    jobs_per_group: 8
 
   - job_name: epms
     job_group: one
-    jobs_per_group: 8
 
   - job_name: filebot
     job_group: one
-    jobs_per_group: 8
 
   - job_name: filezilla
     job_group: one
-    jobs_per_group: 8
 
   - job_name: flaresolverr
     job_group: one
-    jobs_per_group: 8
 
   - job_name: funkwhale
     job_group: one
-    jobs_per_group: 8
 
   - job_name: gazee
     job_group: one
-    jobs_per_group: 8
 
   - job_name: glances
     job_group: one
-    jobs_per_group: 8
 
   - job_name: goplaxt
     job_group: one
-    jobs_per_group: 8
 
   - job_name: grafana
     job_group: one
-    jobs_per_group: 8
 
   - job_name: handbrake
     job_group: one
-    jobs_per_group: 8
 
   - job_name: healthchecks
     job_group: one
-    jobs_per_group: 8
 
   - job_name: heimdall
     job_group: one
-    jobs_per_group: 8
 
   - job_name: influxdb
     job_group: one
-    jobs_per_group: 8
 
   - job_name: invoiceninja
     job_group: one
-    jobs_per_group: 8
 
   - job_name: jdownloader2
     job_group: one
-    jobs_per_group: 8
 
   - job_name: jellyfin
     job_group: one
-    jobs_per_group: 8
 
   - job_name: jirafeau
     job_group: one
-    jobs_per_group: 8
 
   - job_name: kitana
     job_group: one
-    jobs_per_group: 8
 
   - job_name: komga
     job_group: one
-    jobs_per_group: 8
 
   - job_name: lazylibrarian
     job_group: one
-    jobs_per_group: 8
 
   - job_name: lidarrx
     job_group: one
-    jobs_per_group: 8
     
   - job_name: logarr
     job_group: one
-    jobs_per_group: 8
 
   - job_name: mediabutler
     job_group: one
-    jobs_per_group: 8
 
   - job_name: medusa
     job_group: one
-    jobs_per_group: 8
 
   - job_name: minecraft
     job_group: one
-    jobs_per_group: 8
 
   - job_name: monitorr
     job_group: one
-    jobs_per_group: 8
 
   - job_name: mylar
     job_group: one
-    jobs_per_group: 8
 
   - job_name: mylar3
     job_group: one
-    jobs_per_group: 8
 
   - job_name: navidrome
     job_group: one
-    jobs_per_group: 8
 
   - job_name: nextcloud
     job_group: one
-    jobs_per_group: 8
     
   - job_name: nowshowing
     job_group: one
-    jobs_per_group: 8
 
   - job_name: nzbhydra
     job_group: one
-    jobs_per_group: 8
 
   - job_name: ombix
     job_group: one
-    jobs_per_group: 8
 
   - job_name: organizrv1
     job_group: one
-    jobs_per_group: 8
 
   - job_name: ouroboros
     job_group: one
-    jobs_per_group: 8
     
   - job_name: overseerr
     job_group: one
-    jobs_per_group: 8
 
   - job_name: plex2
     job_group: one
-    jobs_per_group: 8
 
   - job_name: pyload
     job_group: one
-    jobs_per_group: 8
 
   - job_name: qbittorrent
     job_group: one
-    jobs_per_group: 8
 
   - job_name: qbittorrentvpn
     job_group: one
-    jobs_per_group: 8
 
   - job_name: quassel
     job_group: one
-    jobs_per_group: 8
 
   - job_name: radarrx
     job_group: one
-    jobs_per_group: 8
 
   - job_name: redbot
     job_group: one
-    jobs_per_group: 8
 
   - job_name: resilio-sync
     job_group: one
-    jobs_per_group: 8
 
   - job_name: requestrrx
     job_group: one
-    jobs_per_group: 8
 
   - job_name: rocketchat
     job_group: one
-    jobs_per_group: 8
 
   - job_name: sickchill
     job_group: one
-    jobs_per_group: 8
 
   - job_name: sonarrx
     job_group: one
-    jobs_per_group: 8
 
   - job_name: speedtest
     job_group: one
-    jobs_per_group: 8
     
   - job_name: sshwifty
     job_group: one
-    jobs_per_group: 8
 
   - job_name: stash
     job_group: one
-    jobs_per_group: 8
 
   - job_name: subsonic
     job_group: one
-    jobs_per_group: 8
 
   - job_name: synclounge
     job_group: one
-    jobs_per_group: 8
     
   - job_name: tdarr
     job_group: one
-    jobs_per_group: 8
 
   - job_name: telegraf
     job_group: one
-    jobs_per_group: 8
 
   - job_name: thelounge
     job_group: one
-    jobs_per_group: 8
 
   - job_name: transmissionvpn
     job_group: one
-    jobs_per_group: 8
     
   - job_name: transmissionx
     job_group: one
-    jobs_per_group: 8
 
   - job_name: ubooquity
     job_group: one
-    jobs_per_group: 8
 
   - job_name: unifi
     job_group: one
-    jobs_per_group: 8
 
   - job_name: unmanic
     job_group: one
-    jobs_per_group: 8
 
   - job_name: varken
     job_group: one
-    jobs_per_group: 8
 
   - job_name: vnstat
     job_group: one
-    jobs_per_group: 8
 
   - job_name: watchtower
     job_group: one
-    jobs_per_group: 8
 
   - job_name: wallabag
     job_group: one
-    jobs_per_group: 8
 
   - job_name: wordpress
     job_group: one
-    jobs_per_group: 8
 
   - job_name: xteve
     job_group: one
-    jobs_per_group: 8
 
   - job_name: znc
     job_group: one
-    jobs_per_group: 8
     
 for:
 
