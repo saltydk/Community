@@ -317,6 +317,7 @@ for:
     matrix:
       only:
         - job_group: one
+          jobs_per_group: 4
 
     build_script:
     - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
