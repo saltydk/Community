@@ -10,7 +10,7 @@ skip_commits:
 image: Ubuntu1804-minimal
 
 matrix:
-  fast_finish: true
+  fast_finish: false
 
 # to disable automatic builds
 build: off
@@ -37,12 +37,10 @@ environment:
     btrfsmaintenance
     calibre
     calibre-web
-    changedetection
     comicstreamer
     couchpotato
     coder
     comixed
-    conreq
     deemix
     deemixrr
     deezloader-remix
@@ -113,64 +111,38 @@ environment:
     unmanic
     varken
     vnstat
-    vscode
     watchtower
     wallabag
     wordpress
     xteve
     znc
+  matrix:
 
-init:
-  - sh: curl -s https://cloudbox.works/scripts/dep.sh | sudo -H sh &> /dev/null
-  - sh: curl -s https://cloudbox.works/scripts/repo.sh | bash &> /dev/null
+  - job_name: airdcpp
 
-install:
-  - sh: |
-      echo "=========================="
-      echo ""
-      echo "Community Branch: $APPVEYOR_REPO_BRANCH"
-      echo ""
-      cd ${COMMUNITY_PATH}
-      cp -n defaults/ansible.cfg.default ansible.cfg
-      cp -n defaults/settings.yml.default settings.yml
-      sudo ansible-playbook community.yml --syntax-check
-      RC=$?; [ $RC -eq 0 ] || exit $RC;
-  - sh: |
-      echo ""
-      echo "=========================="
-      echo ""
-      echo "Cloudbox Branch: $CLOUDBOX_BRANCH"
-      echo ""
-      cd ${CLOUDBOX_PATH}
-      rm settings.yml accounts.yml adv_settings.yml
-      git checkout $CLOUDBOX_BRANCH &> /dev/null
-      sudo ansible-playbook cloudbox.yml --syntax-check
-      sudo ansible-playbook cloudbox.yml --tags core \
-          --skip-tags sanity_check,settings \
-          --skip-tags kernel,hetzner,shell,rclone,system,motd,nvidia,mounts,scripts \
-          --extra-vars '{"continuous_integration":true}' \
-          &> /dev/null
-  - sh: sudo docker login -u $DOCKER_USER -p $DOCKER_PWD
-  - sh: |
-      echo ""
-      echo "=========================="
-      echo ""
-      echo "Community Roles:"
-      echo ""
-      cd ${COMMUNITY_PATH}
-      for TAG in $TAGS
-      do
-          echo --------------------------
-          echo ""
-          echo Running Tag: $TAG
-          sudo ansible-playbook community.yml --tags $TAG \
-              --skip-tags sanity_check,settings \
-              --extra-vars '{"continuous_integration":true}'
-          RC=$?; [ $RC -eq 0 ] || exit $RC;
-          CONTAINERS=$(comm -23 <(sudo docker ps -a --format '{{ .Names}}' | sort) <(echo "letsencrypt\nnginx-proxy") | xargs echo -n)
-          sudo docker stop $CONTAINERS &> /dev/null || true
-          sudo docker rm $CONTAINERS &> /dev/null || true
-          sudo docker image prune -af &> /dev/null || true
-          sudo docker volume prune -f &> /dev/null || true
-          echo ""
-      done
+  - job_name: airsonic
+
+for:
+
+  -
+    matrix:
+      only:
+        - job_name: airdcpp
+
+    environment:
+      TAG: airdcpp
+
+    build_script:
+    - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
+
+  -
+    matrix:
+      only:
+        - job_name: airsonic
+
+    environment:
+      TAG: airsonic
+
+    build_script:
+    - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
+
