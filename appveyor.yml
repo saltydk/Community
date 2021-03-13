@@ -20,12 +20,10 @@ environment:
   CLOUDBOX_PATH: "/home/appveyor/cloudbox"
   COMMUNITY_PATH: "/home/appveyor/projects/community"
   TAGS: >
-    airdcpp
-    airsonic
-    alltube
-    alternatrr
-    alternatrrx
-    amongus
+    
+    
+    
+    
     apprise
     archivebox
     asshama
@@ -122,6 +120,14 @@ environment:
 
   - job_name: airsonic
 
+  - job_name: alltube
+
+  - job_name: alternatrr
+
+  - job_name: alternatrrx
+
+  - job_name: amongus
+
 for:
 
   -
@@ -146,3 +152,46 @@ for:
     build_script:
     - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
 
+  -
+    matrix:
+      only:
+        - job_name: alltube
+
+    environment:
+      TAG: alltube
+
+    build_script:
+    - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
+
+  -
+    matrix:
+      only:
+        - job_name: alternatrr
+
+    environment:
+      TAG: alternatrr
+
+    build_script:
+    - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
+
+  -
+    matrix:
+      only:
+        - job_name: alternatrrx
+
+    environment:
+      TAG: alternatrrx
+
+    build_script:
+    - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
+
+  -
+    matrix:
+      only:
+        - job_name: amongus
+
+    environment:
+      TAG: amongus
+
+    build_script:
+    - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
