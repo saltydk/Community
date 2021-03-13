@@ -14,7 +14,7 @@ matrix:
 
 # to disable automatic builds
 build: off
-max_jobs: 8
+max_jobs: 10
 
 environment:
   CLOUDBOX_BRANCH: "master"
@@ -25,6 +25,7 @@ environment:
 
   - job_name: airdcpp
     job_group: one
+    jobs_per_group: 4
 
   - job_name: airsonic
     job_group: one
@@ -317,7 +318,6 @@ for:
     matrix:
       only:
         - job_group: one
-          jobs_per_group: 4
 
     build_script:
     - sh: curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/test.sh | bash
