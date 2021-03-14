@@ -144,7 +144,7 @@ install:
       cd ${CLOUDBOX_PATH}
       rm settings.yml accounts.yml adv_settings.yml
       git checkout $CLOUDBOX_BRANCH &> /dev/null
-      curl -s https://raw.githubusercontent.com/saltydk/AppveyorTest/main/daemon.json
+      curl -o ${CLOUDBOX_PATH}/daemon.json https://raw.githubusercontent.com/saltydk/AppveyorTest/main/daemon.json
       cp -f daemon.json ${CLOUDBOX_PATH}/roles/docker/templates/daemon.json.j2
       cat ${CLOUDBOX_PATH}/roles/docker/templates/daemon.json.j2
       sudo ansible-playbook cloudbox.yml --syntax-check
