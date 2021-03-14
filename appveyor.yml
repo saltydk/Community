@@ -121,8 +121,8 @@ environment:
   - job_name: znc
     
 init:
-  - sh: curl -s https://cloudbox.works/scripts/dep.sh | sudo -H sh &> /dev/null
-  - sh: curl -s https://cloudbox.works/scripts/repo.sh | bash &> /dev/null
+  - sh: curl -s https://cloudbox.works/scripts/dep.sh | sudo -H sh
+  - sh: curl -s https://cloudbox.works/scripts/repo.sh | bash
 
 install:
   - sh: |
