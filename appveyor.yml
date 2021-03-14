@@ -24,292 +24,196 @@ environment:
   matrix:
 
   - job_name: airdcpp
-    job_group: one
 
   - job_name: airsonic
-    job_group: one
 
   - job_name: alltube
-    job_group: one
 
   - job_name: alternatrr
-    job_group: one
 
   - job_name: alternatrrx
-    job_group: one
 
   - job_name: amongus
-    job_group: one
 
   - job_name: apprise
-    job_group: one
 
   - job_name: archivebox
-    job_group: one
 
   - job_name: asshama
-    job_group: one
 
   - job_name: autoscan
-    job_group: one
 
   - job_name: bazarrx
-    job_group: one
 
   - job_name: beets
-    job_group: one
 
   - job_name: bitwarden
-    job_group: one
 
   - job_name: bookstack
-    job_group: one
 
   - job_name: btrfsmaintenance
-    job_group: one
 
   - job_name: calibre
-    job_group: one
 
   - job_name: calibre-web
-    job_group: one
 
   - job_name: comicstreamer
-    job_group: one
 
   - job_name: couchpotato
-    job_group: one
 
   - job_name: coder
-    job_group: one
 
   - job_name: comixed
-    job_group: one
 
   - job_name: deemix
-    job_group: one
 
   - job_name: deemixrr
-    job_group: one
 
   - job_name: deezloader-remix
-    job_group: one
 
   - job_name: deluge
-    job_group: one
 
   - job_name: delugevpn
-    job_group: one
 
   - job_name: embystat
-    job_group: one
 
   - job_name: emby2
-    job_group: one
 
   - job_name: epms
-    job_group: one
 
   - job_name: filebot
-    job_group: one
 
   - job_name: filezilla
-    job_group: one
 
   - job_name: flaresolverr
-    job_group: one
 
   - job_name: funkwhale
-    job_group: one
 
   - job_name: gazee
-    job_group: one
 
   - job_name: glances
-    job_group: one
 
   - job_name: goplaxt
-    job_group: one
 
   - job_name: grafana
-    job_group: one
 
   - job_name: handbrake
-    job_group: one
 
   - job_name: healthchecks
-    job_group: one
 
   - job_name: heimdall
-    job_group: one
 
   - job_name: influxdb
-    job_group: one
 
   - job_name: invoiceninja
-    job_group: one
 
   - job_name: jdownloader2
-    job_group: one
 
   - job_name: jellyfin
-    job_group: one
 
   - job_name: jirafeau
-    job_group: one
 
   - job_name: kitana
-    job_group: one
 
   - job_name: komga
-    job_group: one
 
   - job_name: lazylibrarian
-    job_group: one
 
   - job_name: lidarrx
-    job_group: one
     
   - job_name: logarr
-    job_group: one
 
   - job_name: mediabutler
-    job_group: one
 
   - job_name: medusa
-    job_group: one
 
   - job_name: minecraft
-    job_group: one
 
   - job_name: monitorr
-    job_group: one
 
   - job_name: mylar
-    job_group: one
 
   - job_name: mylar3
-    job_group: one
 
   - job_name: navidrome
-    job_group: one
 
   - job_name: nextcloud
-    job_group: one
     
   - job_name: nowshowing
-    job_group: one
 
   - job_name: nzbhydra
-    job_group: one
 
   - job_name: ombix
-    job_group: one
 
   - job_name: organizrv1
-    job_group: one
 
   - job_name: ouroboros
-    job_group: one
     
   - job_name: overseerr
-    job_group: one
 
   - job_name: plex2
-    job_group: one
 
   - job_name: pyload
-    job_group: one
 
   - job_name: qbittorrent
-    job_group: one
 
   - job_name: qbittorrentvpn
-    job_group: one
 
   - job_name: quassel
-    job_group: one
 
   - job_name: radarrx
-    job_group: one
 
   - job_name: redbot
-    job_group: one
 
   - job_name: resilio-sync
-    job_group: one
 
   - job_name: requestrrx
-    job_group: one
 
   - job_name: rocketchat
-    job_group: one
 
   - job_name: sickchill
-    job_group: one
 
   - job_name: sonarrx
-    job_group: one
 
   - job_name: speedtest
-    job_group: one
     
   - job_name: sshwifty
-    job_group: one
 
   - job_name: stash
-    job_group: one
 
   - job_name: subsonic
-    job_group: one
 
   - job_name: synclounge
-    job_group: one
     
   - job_name: tdarr
-    job_group: one
 
   - job_name: telegraf
-    job_group: one
 
   - job_name: thelounge
-    job_group: one
 
   - job_name: transmissionvpn
-    job_group: one
     
   - job_name: transmissionx
-    job_group: one
 
   - job_name: ubooquity
-    job_group: one
 
   - job_name: unifi
-    job_group: one
 
   - job_name: unmanic
-    job_group: one
 
   - job_name: varken
-    job_group: one
 
   - job_name: vnstat
-    job_group: one
 
   - job_name: watchtower
-    job_group: one
 
   - job_name: wallabag
-    job_group: one
 
   - job_name: wordpress
-    job_group: one
 
   - job_name: xteve
-    job_group: one
 
   - job_name: znc
-    job_group: one
     
 init:
   - sh: curl -s https://cloudbox.works/scripts/dep.sh | sudo -H sh &> /dev/null
@@ -351,8 +255,8 @@ install:
       cd ${COMMUNITY_PATH}
       echo --------------------------
       echo ""
-      echo Running Tag: $TAG
-      sudo ansible-playbook community.yml --tags $TAG \
+      echo Running Tag: ${APPVEYOR_JOB_NAME}
+      sudo ansible-playbook community.yml --tags ${APPVEYOR_JOB_NAME} \
           --skip-tags sanity_check,settings \
           --extra-vars '{"continuous_integration":true}'
       RC=$?; [ $RC -eq 0 ] || exit $RC;
