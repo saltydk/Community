@@ -23,8 +23,6 @@ environment:
   
   matrix:
 
-  matrix:
-
   - job_name: airdcpp
     job_group: one
 
