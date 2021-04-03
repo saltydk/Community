@@ -154,7 +154,7 @@ install:
           --extra-vars '{"continuous_integration":true}'
       cat /etc/docker/daemon.json
 
-  - sh: sudo docker login -u $DOCKER_USER -p $DOCKER_PWD
+#  - sh: sudo docker login -u $DOCKER_USER -p $DOCKER_PWD
   - sh: |
       echo ""
       echo "=========================="
