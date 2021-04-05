@@ -144,15 +144,13 @@ install:
       cd ${CLOUDBOX_PATH}
       rm settings.yml accounts.yml adv_settings.yml
       git checkout $CLOUDBOX_BRANCH &> /dev/null
-      curl -o ${CLOUDBOX_PATH}/daemon.json https://raw.githubusercontent.com/saltydk/AppveyorTest/main/daemon.json
-      cp -f daemon.json ${CLOUDBOX_PATH}/roles/docker/templates/daemon.json.j2
-      cat ${CLOUDBOX_PATH}/roles/docker/templates/daemon.json.j2
       sudo ansible-playbook cloudbox.yml --syntax-check
       sudo ansible-playbook cloudbox.yml --tags core \
           --skip-tags sanity_check,settings \
           --skip-tags kernel,hetzner,shell,rclone,system,motd,nvidia,mounts,scripts \
           --extra-vars '{"continuous_integration":true}'
-      cat /etc/docker/daemon.json
+  - sh: sudo sed -i -e '$aDOCKER_OPTS="${DOCKER_OPTS} --registry-mirror=http://10.118.232.250:5000"' /etc/default/docker
+  - sh: sudo systemctl restart docker
   - sh: sudo docker system info
 #  - sh: sudo docker login -u $DOCKER_USER -p $DOCKER_PWD
   - sh: |
