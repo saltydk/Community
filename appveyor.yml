@@ -151,6 +151,7 @@ install:
           --extra-vars '{"continuous_integration":true}' \
           &> /dev/null
   - sh: sudo docker login -u $DOCKER_USER -p $DOCKER_PWD
+  - sh: sudo docker system info
   - sh: |
       echo ""
       echo "=========================="
