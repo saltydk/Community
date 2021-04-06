@@ -14,7 +14,7 @@ matrix:
 
 # to disable automatic builds
 build: off
-max_jobs: 10
+max_jobs: 14
 
 environment:
   CLOUDBOX_BRANCH: "master"
