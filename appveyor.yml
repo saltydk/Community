@@ -152,10 +152,6 @@ install:
           --skip-tags sanity_check,settings \
           --skip-tags kernel,hetzner,shell,rclone,system,motd,nvidia,mounts,scripts \
           --extra-vars '{"continuous_integration":true}'
-  - sh: cat /etc/docker/daemon.json
-  - sh: sudo docker system info
-#  - sh: sudo systemctl restart docker
-#  - sh: sudo docker system info
 #  - sh: sudo docker login -u $DOCKER_USER -p $DOCKER_PWD
   - sh: |
       echo ""
