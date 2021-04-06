@@ -151,6 +151,7 @@ install:
           --extra-vars '{"continuous_integration":true}'
   - sh: sudo sed -i -e '$aDOCKER_OPTS="${DOCKER_OPTS} --registry-mirror=http://10.118.232.250:5000"' /etc/default/docker
   - sh: sudo systemctl restart docker
+  - sh: cat /etc/default/docker
   - sh: sudo docker system info
 #  - sh: sudo docker login -u $DOCKER_USER -p $DOCKER_PWD
   - sh: |
