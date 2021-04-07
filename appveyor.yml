@@ -146,7 +146,6 @@ install:
       git checkout $CLOUDBOX_BRANCH &> /dev/null
       curl -o ${CLOUDBOX_PATH}/daemon.json https://raw.githubusercontent.com/saltydk/AppveyorTest/main/daemon.json
       cp -f daemon.json ${CLOUDBOX_PATH}/roles/docker/templates/daemon.json.j2
-      mkdir 
       sudo ansible-playbook cloudbox.yml --syntax-check
       sudo ansible-playbook cloudbox.yml --tags core \
           --skip-tags sanity_check,settings \
